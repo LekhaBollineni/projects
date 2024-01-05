@@ -1,4 +1,4 @@
 # Fun projects from beginner to advanced
 
-1. Simple implementation of Tic Tac Toe in python. Both players are human
+1. Simple implementation of Tic Tac Toe in python. Computer takes random decisions
 

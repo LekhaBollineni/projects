@@ -1,3 +1,15 @@
+import random
+
+#Radom decision for the other player by computer
+def cmpDecision(board):
+    while True:
+        row = random.randint(0,2)
+        col = random.randint(0,2)
+        cp_inp = (row,col)
+        if board[row][col] is None:
+            break
+    return cp_inp
+
 #check if the board is filled
 def checkFilled(board):
     for i in range(3):
@@ -44,13 +56,19 @@ turn = 0
 while True:
     print(board)
 
-    try:
-        row, col = input("Enter the row and column (in the form row column): ").split()
-    except:
-        print("invalid no.of input. Chack and input again:")
-        continue
-    row = int(row)
-    col = int(col)
+    if turn == 0:
+        try:
+            row, col = input("Enter the row and column (in the form row column): ").split()
+        except:
+            print("invalid no.of input. Chack and input again:")
+            continue
+        row = int(row)
+        col = int(col)
+    else:
+        row, col = cmpDecision(board)
+        print(row)
+        print(col)
+
 
     #check the input validity
     if row < 0 or row > 2 or col < 0 or col > 2 or board[row][col]!=None:
@@ -65,8 +83,8 @@ while True:
         turn = (turn + 1) % 2
 
         #Check if there is a winner or if the board is full
-        winner = checkWinner(board)
-        full = checkFilled(board)
+    winner = checkWinner(board)
+    full = checkFilled(board)  
 
     #If there is a winner break loop
     if winner is not None:
@@ -79,7 +97,3 @@ while True:
         print(board)
         print("Game is Tie")
         break
-
-    
-
-

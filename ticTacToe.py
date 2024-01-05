@@ -66,9 +66,6 @@ while True:
         col = int(col)
     else:
         row, col = cmpDecision(board)
-        print(row)
-        print(col)
-
 
     #check the input validity
     if row < 0 or row > 2 or col < 0 or col > 2 or board[row][col]!=None:

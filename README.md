@@ -1,9 +1,10 @@
-# Tic Tac Toe
+#Fun projects from beginner to Advanced
 
-1. Created the logic in python before turning it into a webapp.
-2. Used HTML, CSS, JavaScript for webapp implementation
-3. Coded the single player with computer as opponent first
-4. Computer makes random valid moves
-5. Added two player mode later
+1. Tic Tac Toe
+    - Web app with single and two player modes.
+    - Used HTML, CSS and Java Script
+    - Developed the basic logic in python first
 
+2. Contact Form
+    
 

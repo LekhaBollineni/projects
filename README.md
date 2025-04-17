@@ -6,5 +6,5 @@
     - Developed the basic logic in python first
 
 2. Contact Form
-    
-
+    - Web contact form
+    - Used HTML, CSS, Java Script, node.js + express with SQLite database

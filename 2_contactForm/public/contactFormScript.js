@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try{
             const res= await fetch("/submit",{
                 method: "POST",
-                headers:{ContentType: "application/json"},
+                headers:{"Content-Type": "application/json"},
                 body: JSON.stringify(data)
             });
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="contactFormStyle.css">
+        <script src="contactFormScript.js"></script>
+    </head>
+    <body>
+        <div class="titleBar">
+            <img src="" alt="LekhaB " id="logo">
+            <h1>Contact Form</h1>
+        </div>
+        <div class="contactForm-Container">
+            <form id="contactForm">
+               <span> Name:</span>
+                <div>
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <span>Contact Details:</span>
+                <div>
+                <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <span>Is there anything you want to tell me?</span>
+                <textarea id="message" placeholder="Your targets, pojects etc;"></textarea>
+                <div class="formSubmitButton">
+                    <button type="submit" id="submitButton">Submit</button>
+                    <p id="statusMessage"></p>
+                </div>
+            </form>
+            
+        </div>
+    </body>
+</html>

@@ -136,3 +136,9 @@ body {
     background-color: #018f6c;
     transform: scale(1.05);
   }
+
+  #statusMessage {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+    color: #13352d;
+  }

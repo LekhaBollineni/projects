@@ -34,7 +34,7 @@ Thumbs.db
 # Coverage directory used by testing tools
 coverage/
 
-# Optional: Build outputs (if using a build process)
+# Optional: Build outputs 
 dist/
 build/
 
@@ -45,3 +45,15 @@ build/
 
 # Misc
 *.tgz
+
+# Coverage reports (for testing tools)
+coverage/
+
+# Session files (sessions are stored on disk)
+sessions/
+*.session
+
+# MongoDB local DB data
+dump/
+*.mongodb
+

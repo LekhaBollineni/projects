@@ -8,3 +8,7 @@
 2. Contact Form
     - Web contact form
     - Used HTML, CSS, Java Script, node.js + express with SQLite database
+
+3. Blog
+    - A blog with user authentication 
+    - User can do CRUD operations only when logged in

@@ -18,6 +18,7 @@ pids
 *.pid.lock
 
 # Environment variables
+venv/
 .env
 .env.*   # like .env.development, .env.production
 

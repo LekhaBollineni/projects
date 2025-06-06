@@ -12,3 +12,6 @@
 3. Blog
     - A blog with user authentication 
     - User can do CRUD operations only when logged in
+
+4. WebScraping
+    - Webscraping using Selenium and Playwright

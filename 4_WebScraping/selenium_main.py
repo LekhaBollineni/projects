@@ -35,8 +35,13 @@ page_title = driver.title
 print(f"Page Title: {page_title}")
 
 # Scrape the page content (for demonstration, we will get the first paragraph)
-first_paragraph = driver.find_element(By.TAG_NAME, "p").get_attribute("innerText")
-print(f"First Paragraph: {first_paragraph}")    
+first_quote = driver.find_element(By.TAG_NAME, "span").get_attribute("innerText")
+first_author = driver.find_element(By.TAG_NAME, "small").get_attribute("innerText")
+print(f"First quote: {first_quote}")    
+print(f"First author: {first_author}")
+
+# Scrape all quotes on the page
+
 
 # Close the browser after scraping
 driver.quit()

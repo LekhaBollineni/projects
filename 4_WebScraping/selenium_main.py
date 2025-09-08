@@ -41,7 +41,17 @@ print(f"First quote: {first_quote}")
 print(f"First author: {first_author}")
 
 # Scrape all quotes on the page
+all_quotes = driver.find_elements(By.TAG_NAME, "span")
 
+print('\n-------------------------------------------\n')
+
+print(enumerate(all_quotes))
+
+print('\n-------------------------------------------\n')
+# Iterate through all quotes and print them with their authors
+for i, quote in enumerate(all_quotes):
+    author = driver.find_elements(By.TAG_NAME, "small")[i].get_attribute("innerText")
+    print(f"Quote {i+1}: {quote.get_attribute('innerText')} - Author: {author}")
 
 # Close the browser after scraping
 driver.quit()

@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from typing import List, Optional
 from enum import IntEnum
 from pydantic import BaseModel, Field
@@ -45,7 +45,7 @@ def get_todo(todo_id: int):
     for todo in all_todos:
         if todo.todo_id == todo_id:
             return todo
-    return {'message': 'Todo not found'}
+    raise HTTPException(status_code=404, detail=f"Todo with id {todo_id} not found")
 
 @api.get('/todos', response_model=List[Todo])
 def get_all_todos(first_n: int = None):
@@ -75,3 +75,4 @@ def update_todo_in_list(todo_id: int, todo_update: TodoUpdate):
                 todo.priority = todo_update.priority
 
     return todo
+    raise HTTPException(status_code=404, detail=f"Todo with id {todo_id} not found")

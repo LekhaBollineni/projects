@@ -74,5 +74,5 @@ def update_todo_in_list(todo_id: int, todo_update: TodoUpdate):
             if todo_update.priority is not None:
                 todo.priority = todo_update.priority
 
-    return todo
+        return todo
     raise HTTPException(status_code=404, detail=f"Todo with id {todo_id} not found")

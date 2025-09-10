@@ -1,4 +1,4 @@
-#Fun projects from beginner to Advanced
+Fun projects from beginner to Advanced
 
 1. Tic Tac Toe
     - Web app with single and two player modes.

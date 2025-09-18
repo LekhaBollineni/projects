@@ -63,7 +63,7 @@ def create_todo(todo: TodoCreate):
     all_todos.append(new_todo)
     return new_todo
 
-@api.put('/todos/{todo_id}', response_model=Todo, status_code=200)
+@api.put('/todos/{todo_id}', response_model=Todo)
 def update_todo_in_list(todo_id: int, todo_update: TodoUpdate):
     for todo in all_todos:
         if todo.todo_id == todo_id:
@@ -73,6 +73,5 @@ def update_todo_in_list(todo_id: int, todo_update: TodoUpdate):
                 todo.todo_description = todo_update.todo_description
             if todo_update.priority is not None:
                 todo.priority = todo_update.priority
-
-        return todo
+            return todo
     raise HTTPException(status_code=404, detail=f"Todo with id {todo_id} not found")
